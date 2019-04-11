@@ -5,10 +5,10 @@ from .models import Player, Comment
 def index(request):
     """View function for home page of site"""
 
-    players = Players.objects.all()
+    players = Player.objects.all()
 
     context = {
-        'players' = players
+        'players': players
     }
 
     return render(request, 'index.html', context=context)
